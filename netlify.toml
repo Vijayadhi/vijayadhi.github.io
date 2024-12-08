@@ -1,0 +1,16 @@
+# Define the build settings
+
+
+
+# Custom headers for static assets
+[[headers]]
+  for = "/assets/*" # Customize this based on your assets path
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/static/*" # For static files if used (e.g., Create React App or similar)
+  [headers.values]
+    Cache-Control = "max-age=31536000"
+
+
